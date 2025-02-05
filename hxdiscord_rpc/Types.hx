@@ -46,7 +46,7 @@ extern enum abstract DiscordPremiumType(DiscordPremiumType_Impl)
 }
 
 @:buildXml('<include name="${haxelib:hxdiscord_rpc}/project/Build.xml" />')
-@:include('discord_rpc.hpp')
+@:include('discord_rpc.h')
 @:native('DiscordPremiumType')
 private extern class DiscordPremiumType_Impl {}
 
@@ -76,7 +76,7 @@ extern enum abstract DiscordActivityPartyPrivacy(DiscordActivityPartyPrivacy_Imp
 }
 
 @:buildXml('<include name="${haxelib:hxdiscord_rpc}/project/Build.xml" />')
-@:include('discord_rpc.hpp')
+@:include('discord_rpc.h')
 @:native('DiscordActivityPartyPrivacy')
 private extern class DiscordActivityPartyPrivacy_Impl {}
 
@@ -118,7 +118,7 @@ extern enum abstract DiscordActivityType(DiscordActivityType_Impl)
 }
 
 @:buildXml('<include name="${haxelib:hxdiscord_rpc}/project/Build.xml" />')
-@:include('discord_rpc.hpp')
+@:include('discord_rpc.h')
 @:native('DiscordActivityType')
 private extern class DiscordActivityType_Impl {}
 
@@ -154,7 +154,7 @@ extern enum abstract DiscordActivityJoinRequestReply(DiscordActivityJoinRequestR
 }
 
 @:buildXml('<include name="${haxelib:hxdiscord_rpc}/project/Build.xml" />')
-@:include('discord_rpc.hpp')
+@:include('discord_rpc.h')
 @:native('DiscordActivityJoinRequestReply')
 private extern class DiscordActivityJoinRequestReply_Impl {}
 
@@ -162,7 +162,7 @@ private extern class DiscordActivityJoinRequestReply_Impl {}
  * Represents a button for Discord Rich Presence.
  */
 @:buildXml('<include name="${haxelib:hxdiscord_rpc}/project/Build.xml" />')
-@:include('discord_rpc.hpp')
+@:include('discord_rpc.h')
 @:unreflective
 @:structAccess
 @:native('DiscordButton')
@@ -170,8 +170,11 @@ extern class DiscordButton
 {
 	/**
 	 * Creates a new instance.
+	 *
+	 * @return A new instance.
 	 */
-	function new():Void;
+	@:native('DiscordButton')
+	static function create():DiscordButton;
 
 	/**
 	 * The label of the button that is displayed to users.
@@ -188,7 +191,7 @@ extern class DiscordButton
  * Represents rich presence information for Discord integration.
  */
 @:buildXml('<include name="${haxelib:hxdiscord_rpc}/project/Build.xml" />')
-@:include('discord_rpc.hpp')
+@:include('discord_rpc.h')
 @:unreflective
 @:structAccess
 @:native('DiscordRichPresence')
@@ -196,8 +199,11 @@ extern class DiscordRichPresence
 {
 	/**
 	 * Creates a new instance.
+	 *
+	 * @return A new instance.
 	 */
-	function new():Void;
+	@:native('DiscordRichPresence')
+	static function create():DiscordRichPresence;
 
 	/**
 	 * Type of activity of the rich presence.
@@ -294,7 +300,7 @@ extern class DiscordRichPresence
  * Represents user information for Discord integration.
  */
 @:buildXml('<include name="${haxelib:hxdiscord_rpc}/project/Build.xml" />')
-@:include('discord_rpc.hpp')
+@:include('discord_rpc.h')
 @:unreflective
 @:structAccess
 @:native('DiscordUser')
@@ -302,8 +308,11 @@ extern class DiscordUser
 {
 	/**
 	 * Creates a new instance.
+	 *
+	 * @return A new instance.
 	 */
-	function new():Void;
+	@:native('DiscordUser')
+	static function create():DiscordUser;
 
 	/**
 	 * ID of the user.
@@ -345,7 +354,7 @@ extern class DiscordUser
  * Represents event handlers for Discord integration.
  */
 @:buildXml('<include name="${haxelib:hxdiscord_rpc}/project/Build.xml" />')
-@:include('discord_rpc.hpp')
+@:include('discord_rpc.h')
 @:unreflective
 @:structAccess
 @:native('DiscordEventHandlers')
@@ -353,8 +362,11 @@ extern class DiscordEventHandlers
 {
 	/**
 	 * Creates a new instance.
+	 *
+	 * @return A new instance.
 	 */
-	function new():Void;
+	@:native('DiscordEventHandlers')
+	static function create():DiscordEventHandlers;
 
 	/**
 	 * Callback for when the client becomes ready.

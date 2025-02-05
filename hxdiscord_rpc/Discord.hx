@@ -13,7 +13,7 @@ import hxdiscord_rpc.Types;
  * and managing connection settings.
  */
 @:buildXml('<include name="${haxelib:hxdiscord_rpc}/project/Build.xml" />')
-@:include('discord_rpc.hpp')
+@:include('discord_rpc.h')
 @:unreflective
 extern class Discord
 {
@@ -46,11 +46,11 @@ extern class Discord
 	 *
 	 * @param applicationId The application ID for the Discord app.
 	 * @param handlers Pointer to a DiscordEventHandlers struct containing event callbacks.
-	 * @param autoRegister Indicates whether to automatically register the application to Steam.
+	 * @param autoRegister Indicates whether to automatically register the application.
 	 * @param optionalSteamId Optional Steam ID if using Steam.
 	 */
 	@:native('Discord_Initialize')
-	static function Initialize(applicationId:cpp.ConstCharStar, handlers:cpp.RawPointer<DiscordEventHandlers>, autoRegister:Bool,
+	static function Initialize(applicationId:cpp.ConstCharStar, handlers:cpp.RawPointer<DiscordEventHandlers>, autoRegister:Int,
 		optionalSteamId:cpp.ConstCharStar):Void;
 
 	/**

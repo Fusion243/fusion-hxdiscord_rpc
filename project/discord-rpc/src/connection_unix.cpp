@@ -1,4 +1,4 @@
-#include "connection.hpp"
+#include "connection.h"
 
 #include <errno.h>
 #include <fcntl.h>

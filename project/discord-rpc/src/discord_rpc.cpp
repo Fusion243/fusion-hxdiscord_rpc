@@ -1,8 +1,8 @@
-#include "discord_rpc.hpp"
-#include "backoff.hpp"
-#include "msg_queue.hpp"
-#include "rpc_connection.hpp"
-#include "serialization.hpp"
+#include "discord_rpc.h"
+#include "backoff.h"
+#include "msg_queue.h"
+#include "rpc_connection.h"
+#include "serialization.h"
 
 #include <atomic>
 #include <chrono>
@@ -300,7 +300,7 @@ static bool DeregisterForEvent(const char *evtName)
 	return false;
 }
 
-void Discord_Initialize(const char *applicationId, DiscordEventHandlers *handlers, bool autoRegister, const char *optionalSteamId)
+void Discord_Initialize(const char *applicationId, DiscordEventHandlers *handlers, int autoRegister, const char *optionalSteamId)
 {
 	IoThread = new (std::nothrow) IoThreadHolder();
 
