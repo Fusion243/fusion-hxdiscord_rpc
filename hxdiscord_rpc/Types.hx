@@ -159,35 +159,6 @@ extern enum abstract DiscordActivityJoinRequestReply(DiscordActivityJoinRequestR
 private extern class DiscordActivityJoinRequestReply_Impl {}
 
 /**
- * Represents a button for Discord Rich Presence.
- */
-@:buildXml('<include name="${haxelib:hxdiscord_rpc}/project/Build.xml" />')
-@:include('discord_rpc.h')
-@:unreflective
-@:structAccess
-@:native('DiscordButton')
-extern class DiscordButton
-{
-	/**
-	 * Creates a new instance.
-	 *
-	 * @return A new instance.
-	 */
-	@:native('DiscordButton')
-	static function create():DiscordButton;
-
-	/**
-	 * The label of the button that is displayed to users.
-	 */
-	var label:cpp.ConstCharStar;
-
-	/**
-	 * The URL associated with the button.
-	 */
-	var url:cpp.ConstCharStar;
-}
-
-/**
  * Represents rich presence information for Discord integration.
  */
 @:buildXml('<include name="${haxelib:hxdiscord_rpc}/project/Build.xml" />')
@@ -271,11 +242,6 @@ extern class DiscordRichPresence
 	var partyPrivacy:DiscordActivityPartyPrivacy;
 
 	/**
-	 * Buttons of the rich presence (max 2 elements).
-	 */
-	var buttons:cpp.RawPointer<DiscordButton>;
-
-	/**
 	 * Secret for matching (max 128 bytes).
 	 */
 	var matchSecret:cpp.ConstCharStar;
@@ -294,6 +260,14 @@ extern class DiscordRichPresence
 	 * Whether this is an instance of the rich presence.
 	 */
 	var instance:Bool;
+
+	/**
+	 * Custom buttons for the rich presence.
+	 */
+	 var button1Label:cpp.ConstCharStar; /* max 32 bytes */
+	 var button1Url:cpp.ConstCharStar; /* max 512 bytes */
+	 var button2Label:cpp.ConstCharStar; /* max 32 bytes */
+	 var button2Url:cpp.ConstCharStar; /* max 512 bytes */
 }
 
 /**
