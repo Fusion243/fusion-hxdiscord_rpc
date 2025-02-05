@@ -1,7 +1,7 @@
 -cp ./
 -D analyzer-optimize
 -D DISCORD_DISABLE_IO_THREAD
--lib fusion-hxdiscord_rpc
+-lib hxdiscord_rpc
 -main Main
 -cpp bin
 -cmd bin/Main
