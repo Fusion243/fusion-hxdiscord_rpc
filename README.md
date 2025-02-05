@@ -11,11 +11,11 @@ Haxe/hxcpp @:native bindings for [Discord RPC](https://github.com/discord/discor
 
 You can install it through `Haxelib`
 ```bash
-haxelib install hxdiscord_rpc
+haxelib install fusion-hxdiscord_rpc
 ```
 Or through `Git`, if you want the latest updates
 ```bash
-haxelib git hxdiscord_rpc https://github.com/MAJigsaw77/hxdiscord_rpc.git
+haxelib git fusion-hxdiscord_rpc https://github.com/Fusion243/fusion-hxdiscord_rpc.git
 ```
 
 ### Usage Example
